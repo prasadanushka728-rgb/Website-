@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Envelope Letter</title>
+
+<style>
+body{
+  margin:0;
+  background:pink;
+  font-family:cursive;
+}
+/* TOP HEADING */
+h1{
+  text-align:center;
+  margin-top:70px;
+}
+
+/* CENTER AREA */
+.center-box{
+  height:calc(100vh - 80px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* ENVELOPE */
+.envelope{
+  width:300px;
+  height:200px;
+  background:#c0392b;
+  border-radius:20px;
+  position:relative;
+  cursor:pointer;
+  overflow:hidden;
+}
+
+/* FLAP */
+.flap{
+  position:absolute;
+  inset:0;
+  background:#e74c3c;
+  clip-path:polygon(0 0,100% 0,50% 55%);
+  transform-origin:top;
+  transition:0.8s;
+}
+
+/* FULLSCREEN LETTER */
+.letter-screen{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.4);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:10;
+}
+.paper{
+<div class="fold-lines"></div>
+  position:relative;
+  width:85%;
+  max-width:420px;
+  height:43%;
+  background:#fff8dc; /* old paper color */
+  padding:25px;
+  border-radius:4px;
+  box-shadow:
+    inset 0 0 30px rgba(139,69,19,0.2),
+    0 15px 35px rgba(0,0,0,0.4);
+  overflow:auto;
+  font-size:18px;
+  line-height:1.8; 
+  }
+
+  /* old paper feel */
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 28px,
+      rgba(0,0,0,0.05) 29px
+    );
+
+  animation:khattOpen 1s ease;
+}
+@keyframes khattOpen{
+  from{
+    transform:scaleY(0.2);
+    opacity:0;
+  }
+  to{
+    transform:scaleY(1);
+    opacity:1;
+  }
+}
+
+/* STATES */
+.envelope.open .flap{
+  transform:rotateX(180deg);
+}
+
+.letter-screen.show{
+  display:flex;
+}
+.banner{
+  text-align:center;
+  font-size:22px;
+  padding:10px;
+  background:linear-gradient(90deg,#ff9a9e,#fad0c4);
+  color:#8b0000;
+  border-radius:20px;
+  width:80%;
+  margin:10px auto;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+.balloon{
+  position:fixed;
+  bottom:-60px;
+  font-size:50px;
+  animation:floatUp 6s infinite ease-in;
+  z-index:1;
+}
+
+.left{
+  left:20px;
+}
+
+.right{
+  right:20px;
+  animation-delay:3s;
+}
+
+@keyframes floatUp{
+  from{
+    transform:translateY(0);
+    opacity:1;
+  }
+  to{
+    transform:translateY(-110vh);
+    opacity:0;
+  }
+}
+.garland{
+  position:fixed;
+  top:0;
+  width:100%;
+  text-align:center;
+  font-size:28px;
+  padding:10px 0;
+  background:linear-gradient(to right,#ffd1dc,#fff0f5,#ffd1dc);
+  z-index:20;
+}
+
+  background:
+    linear-gradient(to bottom,
+      transparent 32%,
+      rgba(139,69,19,0.35) 33%,
+      transparent 34%,
+
+      transparent 66%,
+      rgba(139,69,19,0.35) 67%,
+      transparent 68%
+    );
+
+  animation:foldFade 2s ease forwards;
+}
+</style>
+</head>
+
+<body>
+    <div class="garland">
+  🌸 🌼 🌺 🌼 🌸 🌼 🌺 🌼 🌸
+</div>
+
+<!-- 🔥 HEADING TOP PE -->
+<h1><font size="10"><b>💌 My Special Letter</font></b></h1><br>
+<center><h2><b><font size="6" color="teal">Open the Envelope</font></b></h2></center>
+<div class="banner">💖 Love Forever 💖</div>
+<div class="center-box">
+  <div class="envelope" onclick="openLetter()">
+    <div class="flap"></div>
+  </div>
+</div>
+
+<!-- LETTER -->
+<div class="letter-screen" onclick="closeLetter()">
+  <div class="paper">
+    💌 Dear varun Baby❤️<br>
+            i just want to tell you once again like everytime that u mean the world for me 🎀🫂🌍<br>
+ I can't imagine a single day without you<3 <br>
+ We fought a lot during our starting or middle phase but now I trust on God this much that whatever we will do. .god will keep you mine 😭🫂💋<br>
+ i love you so much that's why krishn ji is keeping us together...power of my prayers 🥹💋....
+Thank you for making my everyday full of joy , love , excitement and happiness 😘🎀..
+infinity years to Us with a never ending interest on each other 🥺🫂
+<br>
+The bestest day of my life yet is <b>19 Jan 2025 </b>🥹💋...That warm hug 🫂❤️it felt like that the whole world is in my arms 🥺😭🌍
+The Eye contacts of ours 🧿🤭..your presence was divine for me 🤌🏻😚
+Another most important day was <b>22 july 2024</b> when we start our loveship ❤️😭<br>
+ I always pray that we will end up with each other on Shadi ka mandap 🥺💋🧿and will begin new journey 🤭❤️ <br>
+ Be my husband 😘💗<br>
+ come soon babuuu I want to feel u again ...and this time inside me. 🤭🌚❤️
+I Love you infinite betu♾️💋<br>
+ 
+           Forever Yours 💕...<br>
+         ~~~Anu babu💋
+  </div>
+</div>
+<div class="balloon left">🎈❤️</div>
+<div class="balloon right">🎈💖</div>
+<div class="bg-heart h1">💖</div>
+<div class="bg-heart h2">💗</div>
+<div class="bg-heart h3">💕</div>
+<script>
+function openLetter(){
+  document.querySelector('.envelope').classList.add('open');
+  document.querySelector('.letter-screen').classList.add('show');
+}
+
+function closeLetter(){
+  document.querySelector('.letter-screen').classList.remove('show');
+  document.querySelector('.envelope').classList.remove('open');
+}
+</script>
+
+</body>
+</html>
