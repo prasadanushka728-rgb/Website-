@@ -7,6 +7,7 @@
 width:70%;
 height:60%;
 background:linear-gradient(135deg,#7b2ff7,#b721ff);
+border:black;
 border-radius:20px;
 display:flex;
 justify-content:center;
@@ -24,6 +25,48 @@ p{font-family:Edwardian Script ITC;
 h2{
     font-family: Algerian;
 }
+p2{
+    font-family: Brush Script MT;
+}
+.emoji{
+    position:absolute;
+    font-size:32px;
+    animation:floatUp 4s linear infinite;
+}
+
+@keyframes floatUp{
+    0%{
+        transform:translateY(0) translateX(0);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-400px) translateX(20px);
+        opacity:0;
+    }
+}
+.emoji:nth-child(1){ left:10%; animation-delay:0s; }
+.emoji:nth-child(2){ left:30%; animation-delay:1s; }
+.emoji:nth-child(3){ left:50%; animation-delay:2s; }
+.emoji:nth-child(4){ left:70%; animation-delay:0.5s; }
+.emoji:nth-child(5){ left:90%; animation-delay:1.5s; }
+.confetti{
+    position:absolute;
+    width:8px;
+    height:8px;
+    background:gold;
+    opacity:0.8;
+    animation:fall linear infinite;
+}
+
+@keyframes fall{
+    0%{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(500px) rotate(360deg);
+        opacity:0;
+    }          
 </style>     
     </head>
   <body bgcolor="pink">
@@ -33,7 +76,16 @@ h2{
       <center><h2><font size="6">This is how our New year will look like after some years </center></font></h2>
       <br>
      <center> <div class="box">
-     <img src="https://lh3.googleusercontent.com/rd-d/ALs6j_Gjd_wqNlNlnWTFjKZg2eLImi2GMnNjNXCWPJxvz5ufFskEwgl1KNaml_wOOfqGh-y2Yqd8GZJbC3exfwaT8aAJ_KC-Lru0QvKCBJke1EK1Fa9rQaiSKwu4L8-RHx7YzJaoNKJXaZe8ZvoekghXecl1_mIPOe-EhPs6I7DrKIhbQ0wzzmZhnh3kyq0Y4NwSZu9T4I66tGXM3dSiu8BIH9gdUrY4V4XKdWkSPRqHBPK_ZXYk8pwn26lEKkU3Ub_3OIdhc2dsFzipz0r-Vw9iZE8BFjosXIACLuDjs_5QJ_xeKAq0xq0mG0d0VIItkLLxIiDbdcU5a-kzoxsXigQL2j2OR1SqjWI2S0GOzXIVbx4BAqm2z-RcU_ywQ3xvvWLtiH116ET2dptRc4EpHY9AVI724r24cposH_51l_U6q7GH94vZCwDwZQKbsoxEIspgq-7c_7crYmfgFPyRHbxTLozZkcXthC4b2NFVqMEsuJ6RtejXkg9MMIthRMsYMdP0rdLLwWaRmZqTXUVN0HBhja4Z-fzCT8TQMApWEcqgnfyzNTTAXJoTxN_QDF3Co4yMIF2JDh84LY4dRgDX7Bc7ufyf-1nnnMWJlYHmrVCXKG-mrZn_IiDzgOXKIFNhxXSlnrxfkASKSGVWk_M9U7M3u-VfHiyPh7VXCxJGLTuB-WjuefoemXsIhMAEDt9nUxPGIo8Db2r9QPK3b-0leQNaBdabbWmm7-nBjsSvfTc5r857jIA-AJeX4_cV3Kt1hE4ruFbH8BrylIEbaajdXcaVk8tPcO4S-yjDC43oIZhdRyZ1BKKDy13MVZXlF3YSL36QJnT28LTAu9mQRFeMK7qHhKp0E0wtopYjPXq5fg0CRCyM37K6c3lwBSTGBQFsME4CIUTncmRTEmgFxQcIPD2004cX426IIFma1Gt28KuSFQt10MY7_bUB4mOOxR8TTULIgsAE8Xkz_DL1InIn4DDT5_IEcJJaI7-1psab3a_uXxA434xytOAO6RZVV3IM_62W-54Sxg=s1024?auditContext=thumbnail" width="90%" height="80%"></center> </div>
+     <img src="https://lh3.googleusercontent.com/rd-d/ALs6j_Gjd_wqNlNlnWTFjKZg2eLImi2GMnNjNXCWPJxvz5ufFskEwgl1KNaml_wOOfqGh-y2Yqd8GZJbC3exfwaT8aAJ_KC-Lru0QvKCBJke1EK1Fa9rQaiSKwu4L8-RHx7YzJaoNKJXaZe8ZvoekghXecl1_mIPOe-EhPs6I7DrKIhbQ0wzzmZhnh3kyq0Y4NwSZu9T4I66tGXM3dSiu8BIH9gdUrY4V4XKdWkSPRqHBPK_ZXYk8pwn26lEKkU3Ub_3OIdhc2dsFzipz0r-Vw9iZE8BFjosXIACLuDjs_5QJ_xeKAq0xq0mG0d0VIItkLLxIiDbdcU5a-kzoxsXigQL2j2OR1SqjWI2S0GOzXIVbx4BAqm2z-RcU_ywQ3xvvWLtiH116ET2dptRc4EpHY9AVI724r24cposH_51l_U6q7GH94vZCwDwZQKbsoxEIspgq-7c_7crYmfgFPyRHbxTLozZkcXthC4b2NFVqMEsuJ6RtejXkg9MMIthRMsYMdP0rdLLwWaRmZqTXUVN0HBhja4Z-fzCT8TQMApWEcqgnfyzNTTAXJoTxN_QDF3Co4yMIF2JDh84LY4dRgDX7Bc7ufyf-1nnnMWJlYHmrVCXKG-mrZn_IiDzgOXKIFNhxXSlnrxfkASKSGVWk_M9U7M3u-VfHiyPh7VXCxJGLTuB-WjuefoemXsIhMAEDt9nUxPGIo8Db2r9QPK3b-0leQNaBdabbWmm7-nBjsSvfTc5r857jIA-AJeX4_cV3Kt1hE4ruFbH8BrylIEbaajdXcaVk8tPcO4S-yjDC43oIZhdRyZ1BKKDy13MVZXlF3YSL36QJnT28LTAu9mQRFeMK7qHhKp0E0wtopYjPXq5fg0CRCyM37K6c3lwBSTGBQFsME4CIUTncmRTEmgFxQcIPD2004cX426IIFma1Gt28KuSFQt10MY7_bUB4mOOxR8TTULIgsAE8Xkz_DL1InIn4DDT5_IEcJJaI7-1psab3a_uXxA434xytOAO6RZVV3IM_62W-54Sxg=s1024?auditContext=thumbnail" width="90%" height="85%"></center>
      <p><center><font color="red" size="5"></center>Infinity years to Us ... I Love You So Much Baby </p></center>
+     <div class="emoji">🎈</div>
+    <div class="emoji">❤️</div>
+    <div class="emoji">🎈</div>
+    <div class="emoji">❤️</div>
+    <div class="emoji">🎈</div>
+    </div>
+    <br>
+    <br>
+<center><p2><b><font size="5" color="violet"><a href="https://prasadanushka728-rgb.github.io/Envelope-/"><3 VARUSHKA'S L♡ve 👈🏻</a><hr color="violet" width="60%"></3></b> </p2>
   </body>  
 </html>
